@@ -24,9 +24,23 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/font-awesome/css/font-awesome.min.css",
+              "./node_modules/@icon/themify-icons/themify-icons.css",
+              "./node_modules/line-awesome/css/line-awesome.min.css",
+              "src/assets/vendors/css/base/elisyam-1.5.min.css",
+              "./node_modules/alertifyjs/build/css/alertify.css",
+              "./node_modules/alertifyjs/build/css/themes/default.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/vendors/js/base/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js",
+              "src/assets/vendors/js/base/core.min.js",
+              "src/assets/vendors/js/app/app.min.js",
+              "./node_modules/alertifyjs/build/alertify.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -120,6 +134,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "BA-WebGPS"
 }

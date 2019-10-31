@@ -1,0 +1,77 @@
+<!-- Begin Preloader -->
+<!-- <div id="preloader">
+  <div class="canvas">
+    <img src="assets/img/logo.png" alt="logo" class="loader-logo">
+    <div class="spinner"></div>
+  </div>
+</div> -->
+<!-- End Preloader -->
+<!-- Begin Container -->
+<div class="container-fluid no-padding h-100">
+  <div class="row flex-row h-100 bg-white">
+    <!-- Begin Left Content -->
+    <div class="col-xl-8 col-lg-6 col-md-5 no-padding">
+      <div class="elisyam-bg background-01">
+        <div class="elisyam-overlay overlay-01"></div>
+        <div class="authentication-col-content mx-auto">
+          <h1 class="gradient-text-01">
+            Welcome To Elisyam!
+          </h1>
+          <span class="description">
+            Etiam consequat urna at magna bibendum, in tempor arcu fermentum vitae mi massa egestas.
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- End Left Content -->
+    <!-- Begin Right Content -->
+    <div class="col-xl-4 col-lg-6 col-md-7 my-auto no-padding">
+      <!-- Begin Form -->
+      <div class="authentication-form mx-auto">
+        <div class="logo-centered">
+          <a href="db-default.html">
+            <img src="assets/img/logo.png" alt="logo">
+          </a>
+        </div>
+        <h3>Đăng nhập hệ thống GPS</h3>
+        <form name="form" (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
+          <div class="group material-input">
+            <input name="username" type="text" class="form-control" required [(ngModel)]="model.username"
+              #username="ngModel">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Tên đăng nhập</label>
+          </div>
+          <div class="group material-input">
+            <input name="password" type="password" class="form-control" required [(ngModel)]="model.password"
+              #password="ngModel" />
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Mật khẩu</label>
+          </div>
+
+          <div class="row">
+            <div class="col text-left">
+              <div class="styled-checkbox">
+                <input type="checkbox" name="checkbox" id="remeber">
+                <label for="remeber">Nhớ mật khẩu</label>
+              </div>
+            </div>
+            <div class="col text-right">
+              <a href="pages-forgot-password.html">Quên mật khẩu ?</a>
+            </div>
+          </div>
+          <div class="sign-btn text-center">
+            <button [disabled]="loading" type="submit" class="btn btn-lg btn-gradient-01">Đăng nhập</button>
+            <img *ngIf="loading"
+              src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+          </div>
+        </form>
+      </div>
+      <!-- End Form -->
+    </div>
+    <!-- End Right Content -->
+  </div>
+  <!-- End Row -->
+</div>
+<!-- End Container -->

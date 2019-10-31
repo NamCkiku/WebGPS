@@ -1,0 +1,43 @@
+<!-- Begin Preloader -->
+<!-- <div id="preloader">
+    <div class="canvas">
+        <img src="assets/img/logo.png" alt="logo" class="loader-logo">
+        <div class="spinner"></div>
+    </div>
+</div> -->
+<!-- End Preloader -->
+<div class="page">
+    <!-- Begin Header -->
+
+    <app-top-menu></app-top-menu>
+
+    <!-- End Header -->
+    <!-- Begin Page Content -->
+    <div class="page-content d-flex align-items-stretch">
+        <!-- sidebar menu -->
+
+        <app-sidebar-menu></app-sidebar-menu>
+
+        <!-- /sidebar menu -->
+        <!-- End Left Sidebar -->
+        <div class="content-inner">
+
+            <router-outlet></router-outlet>
+
+            <!-- End Container -->
+            <!-- Begin Page Footer-->
+
+            <app-footer></app-footer>
+
+            <!-- End Page Footer -->
+            <a href="#" class="go-top"><i class="la la-arrow-up"></i></a>
+            <!-- Offcanvas Sidebar -->
+
+            <app-sidebar-right></app-sidebar-right>
+
+            <!-- End Offcanvas Sidebar -->
+        </div>
+        <!-- End Content -->
+    </div>
+    <!-- End Page Content -->
+</div>
