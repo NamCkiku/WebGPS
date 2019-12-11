@@ -27,9 +27,9 @@
 
                         <agm-marker-cluster [minimumClusterSize]="5" [styles]="clusterStyles"
                         [imagePath]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQZ06Wh8dKlZHS0hja_9YcxkI3e4t_DNbSgONoYmYB05R6ACsdMA&s'">
-                            <agm-marker-with-label *ngFor="let m of markers; let i = index"
+                            <agm-marker *ngFor="let m of markers; let i = index"
                                 (markerClick)="clickedMarker(m.label, i)" [latitude]="m.lat" [longitude]="m.lng"
-                                [label]="m.label" labelContent="m.label" [markerDraggable]="m.draggable" (dragEnd)="markerDragEnd(m, $event)">
+                                [label]="m.label" [markerDraggable]="m.draggable" (dragEnd)="markerDragEnd(m, $event)">
 
                                 <agm-info-window>
                                     <strong>InfoWindow content</strong>
