@@ -9,7 +9,7 @@
                         <li class="breadcrumb-item"><a href="db-all.html"><i class="ti ti-home"></i></a></li>
                         <li class="breadcrumb-item active">Blank</li>
                     </ul>
-                </div>	                            
+                </div>
             </div>
         </div>
     </div>
@@ -20,6 +20,27 @@
             <div class="widget has-shadow">
                 <div class="widget-body">
                     <p class="text-primary mt-2 mb-2">Play with Elisyam :)</p>
+
+                    <!--Fullscreen Map Starts-->
+                    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false"
+                        [zoomControl]="false" (mapClick)="mapClicked($event)">
+
+                        <agm-marker *ngFor="let m of markers; let i = index" (markerClick)="clickedMarker(m.label, i)"
+                            [latitude]="m.lat" [longitude]="m.lng" [label]="m.label" [markerDraggable]="m.draggable"
+                            (dragEnd)="markerDragEnd(m, $event)">
+
+                            <agm-info-window>
+                                <strong>InfoWindow content</strong>
+                            </agm-info-window>
+
+                        </agm-marker>
+
+                        <agm-circle [latitude]="lat + 0.3" [longitude]="lng" [radius]="50000" [fillColor]="'red'"
+                            [circleDraggable]="true" [editable]="true">
+                        </agm-circle>
+
+                    </agm-map>
+                    <!--Fullscreen Map Ends-->
                 </div>
             </div>
         </div>

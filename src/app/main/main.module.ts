@@ -25,7 +25,7 @@ import { UrlAvatarPipe } from '../core/pipe/url-avatar.pipe';
     MainRoutingModule,
     OnlineModule,
     RouteModule,
-    ListVehicleOnlineModule,
+    ListVehicleOnlineModule
   ]
 })
 export class MainModule { }
