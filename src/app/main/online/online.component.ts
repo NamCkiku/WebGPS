@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MouseEvent } from '@agm/core';
+import { ClusterStyle, ClusterOptions } from '@agm/js-marker-clusterer/services/google-clusterer-types';
 
 @Component({
   selector: 'app-online',
@@ -8,9 +9,22 @@ import { MouseEvent } from '@agm/core';
 })
 export class OnlineComponent implements OnInit {
 
+  clusterStyles: ClusterStyle[];
+  clusterOptions: ClusterOptions;
+
   constructor() { }
 
   ngOnInit() {
+
+    this.clusterStyles = [
+      {
+          textColor: "#2f3640",
+          url: "https://googlemaps.github.io/js-marker-clusterer/images/m",
+          height: 58,
+          width: 58,
+          anchor: [32, 0],
+      }
+  ];
   }
    // google maps zoom level
    zoom: number = 8;

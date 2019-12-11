@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { OnlineComponent } from './online.component';
 import { Routes,RouterModule } from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
+import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
 
 const routes: Routes = [
   { path: '', component: OnlineComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    AgmCoreModule
+    AgmCoreModule,
+    AgmJsMarkerClustererModule
   ]
 })
 export class OnlineModule { }

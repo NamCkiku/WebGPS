@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // <== add th
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AgmCoreModule } from '@agm/core';
+import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBr5_picK8YJK7fFR2CPzTVMj6GG1TtRGo'
-  })
+    }),
+    AgmJsMarkerClustererModule
   ],
   providers: [],
   bootstrap: [AppComponent]
