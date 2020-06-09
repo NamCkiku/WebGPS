@@ -136,5 +136,8 @@
       }
     }
   },
-  "defaultProject": "BA-WebGPS"
+  "defaultProject": "BA-WebGPS",
+  "cli": {
+    "analytics": "9a4f37e8-1933-456d-9deb-fc0ab0a948fc"
+  }
 }

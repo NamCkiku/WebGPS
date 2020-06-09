@@ -24,14 +24,13 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    //this.loading = true;
-    this.router.navigate([UrlConstants.ONLINE]);
-    //this.authenService.login(this.model.username, this.model.password)
-    //.then(data => {
-     // this.router.navigate([UrlConstants.ONLINE]);
-    //}).catch(error=>{
-     // this.loading = false;
-    //});
+    this.loading = true;
+    this.authenService.login(this.model.username, this.model.password)
+    .then(data => {
+     this.router.navigate([UrlConstants.ONLINE]);
+    }).catch(error=>{
+      this.loading = false;
+    });
   }
 
   

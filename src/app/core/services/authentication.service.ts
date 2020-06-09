@@ -14,16 +14,17 @@ export class AuthenticationService {
   constructor(private _http: HttpClient, private notificationService: NotificationService, ) { }
 
   login(username: string, password: string) {
-    let uri = ApiUri.GET_LOGIN + "?username=" + encodeURIComponent(username) +
-      "&password=" + encodeURIComponent(password) +
-      "&appID=BinhAnh";
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
     var promise = new Promise((resolve, reject) => {
-      this._http.get(SystemConstants.BASE_API + uri, { headers: headers })
+      this._http.post("http://loginbagps.bagroup.vn/api/v1/authentication/login",{
+        "userName": encodeURIComponent(username),
+        "password": encodeURIComponent(password),
+        "appType": 0
+      }, { headers: headers })
         .subscribe((response: any) => {
           console.log(response);
-          let user = new LoggedInUser(response);
+          let user = new LoggedInUser(response.data);
           console.log(user);
           if (user != null) {
             switch (user.Status) {
