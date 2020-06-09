@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MouseEvent } from '@agm/core';
 import { ClusterStyle, ClusterOptions } from '@agm/js-marker-clusterer/services/google-clusterer-types';
+import { SignalrService } from 'src/app/core/services/signalr.service';
 
 @Component({
   selector: 'app-online',
@@ -12,7 +13,7 @@ export class OnlineComponent implements OnInit {
   clusterStyles: ClusterStyle[];
   clusterOptions: ClusterOptions;
 
-  constructor() { }
+  constructor(public signalRService: SignalrService) { }
 
   ngOnInit() {
 
@@ -25,6 +26,9 @@ export class OnlineComponent implements OnInit {
           anchor: [32, 0],
       }
   ];
+  this.signalRService.startConnection();
+  this.signalRService.onSendCarSignalRByGroup();
+
   }
    // google maps zoom level
    zoom: number = 8;
@@ -38,6 +42,8 @@ export class OnlineComponent implements OnInit {
    }
    
    mapClicked($event: MouseEvent) {
+    this.signalRService.JoinGroupByVehicleId();
+
      this.markers.push({
        lat: $event.coords.lat,
        lng: $event.coords.lng,
